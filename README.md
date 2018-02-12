@@ -1,7 +1,4 @@
-# README
-
-# CMPE172 HW1
-# Team: Winter is Coming
+# CMPE172, HW1 - Team: Winter is Coming
 
 In this assignment, we configure Ansible to deploy a webserver on AWS EC2, and bring it up on port 80 with a webpage that is public accessible and displays “Hello World!”
 Relevant code to provision and tear down a webserver can all be found online at 
