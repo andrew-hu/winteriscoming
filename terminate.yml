@@ -1,0 +1,10 @@
+- name: Start instances
+  hosts: localhost
+  connection: local
+  gather_facts: False
+  tasks:
+    - name: terminate instances
+      ec2:
+        state: 'absent'
+        instance_ids: '{{ instance_id }}'
+        region: '{{ region }}'

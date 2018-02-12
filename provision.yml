@@ -1,0 +1,12 @@
+- name: Provision instances
+  hosts: production
+  tasks:
+    - name: make sure all instances are started
+      local_action:
+        module: ec2
+        state: 'running'
+        instance_ids: '{{ instance_id }}'
+        region: '{{ region }}'
+    - name: Run provisioning script
+      script: ./provision.sh
+       

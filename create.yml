@@ -1,0 +1,20 @@
+- hosts: localhost
+  connection: local
+  gather_facts: False
+
+  tasks:
+
+    - name: Provision a set of instances
+      ec2:
+         region: us-west-2
+         group_id: sg-4e48f731
+         instance_type: t2.small
+         image: ami-f2d3638a
+         wait: true
+         exact_count: 1
+         keypair: cmpe172-key-pair
+         count_tag:
+            Name: Demo
+         instance_tags:
+            Name: Demo
+      register: ec2
