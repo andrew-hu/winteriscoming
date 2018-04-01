@@ -24,4 +24,4 @@ This playbook terminates a ec2 instance. Extra vars needed are instance_id and r
 ansible-playbook terminate.yml --extra-vars "instance_id=i-00f5bb3c986b291d8 region=us-west-2"
 ```
 
-Testing Jenkins Build 2
+Testing Jenkins Build 3
